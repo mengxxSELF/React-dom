@@ -1,9 +1,9 @@
 .App {
   text-align: center;
   margin: 0 auto;
-  padding: 60px;;
-  width: 400px;
-  height: 500px;
+  padding: 10px 60px;
+  width: 500px;
+  min-height: 500px;
   border-radius: 10px;
   background: #77e0ee;;
 }
@@ -27,3 +27,22 @@ button {
   border-radius: 5px;
 }
 
+
+
+h4 {
+  text-align: left;
+  cursor: pointer;
+  border: 1px dashed #ffffff;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  color: rgb(28, 75, 204);
+}
+
+.logs {
+  background: #fff;
+  border-radius: 5px;
+  text-align: left;
+  padding: 10px;
+  margin: 20px 0;
+}

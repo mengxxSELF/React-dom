@@ -1,11 +1,8 @@
 // 使用回调 -- 生命周期
 
 import React, { Component } from 'react'
-
 export default class RefBox extends Component {
     state = { node: true }
-
-
     render () {
         if (!this.state.node) return '组件已销毁'
 
@@ -15,22 +12,27 @@ export default class RefBox extends Component {
 }
 
 class RefCb extends Component {
+    state = { logs: [] }
+
     constructor (props) {
         super(props)
-        console.log(this.input, 'constructor')
+        this.setState({ log: [`${this.input}, constructor`]})
     }
     componentDidMount() {
-        console.log(this.input, 'componentDidMount')
+        this.setState({ log: [...this.state.logs, `${this.input}, componentDidMount`] })
     }
 
     componentWillUnmount () {
-        console.log(this.input, 'componentWillUnmount')
+        this.setState({ log: [...this.state.logs, `${this.input}, componentWillUnmount`] })
     }
 
     render() {
         return [
-            <input key='input' ref={ref => this.input = ref } />,
-            <button key='button' onClick={this.props.destory}>destory Component </button>
+            <input key='input' ref={ref => {
+                console.log(ref, '33')
+                this.input = ref
+            }} />,
+            <button key='button' onClick={this.props.destory}>destory Component </button>,
         ]
     }
 }

@@ -3,8 +3,9 @@ import HocComponent from './HocComponent'
 
 class DefaultComponent extends Component {
     render (){
+        const { myforwardref } = this.props
         return (
-            <input {...this.props} />
+            <input ref={myforwardref} {...this.props} />
         )
     }
 }

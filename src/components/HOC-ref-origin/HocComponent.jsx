@@ -6,8 +6,8 @@ function HocComponent(WrappendComponent) {
         render() {
             const { myforwardRef, handleclick, ...rest } = this.props
             return <div>
-                <WrappendComponent ref={myforwardRef} {...rest} />
-                <button onClick={this.props.handleclick}>click me</button>
+                <WrappendComponent myforwardref={myforwardRef} {...rest} />
+                <button onClick={handleclick}>click me</button>
             </div>
         }
     }

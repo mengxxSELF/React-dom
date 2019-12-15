@@ -1,12 +1,5 @@
 import React, { Component } from 'react'
 
-
-function Tem ( {ref} ) {
-  return <input ref={ref}></input>
-}
-
-
-
 export default class RefCb extends Component {
     componentDidMount() {
         const target = this.input
@@ -15,15 +8,13 @@ export default class RefCb extends Component {
     }
 
     show = _ => {
-        const temInput = this.tem.current.value
-        console.log('temInput', temInput)
+        console.log('default', this.input.value)
     }
 
     render() {
         return [
-            <input ref={ref => this.input = ref} />,
-            <Tem ref={tem => this.tem = tem}  />,
-            <button onClick={_ => this.show()}>show  input value</button>
+            <input key='input' ref={ref => this.input = ref} />,
+            <button key='btn'onClick={_ => this.show()}>show value</button>
         ]
     }
 }
