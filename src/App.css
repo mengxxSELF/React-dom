@@ -1,11 +1,21 @@
+.cont {
+  display: flex;
+}
+
+.coding > div {
+   text-align: left;
+}
+
 .App {
+  width: 500px;
+  background: #77e0ee;
+}
+.App, .coding {
   text-align: center;
   margin: 0 auto;
   padding: 10px 60px;
-  width: 500px;
   min-height: 500px;
   border-radius: 10px;
-  background: #77e0ee;;
 }
 
 input {
@@ -45,4 +55,24 @@ h4 {
   text-align: left;
   padding: 10px;
   margin: 20px 0;
+}
+
+.coding {
+  padding: 10px 20px;
+}
+
+.hljs-keyword {
+  color: rgb(233, 110, 227) !important;
+}
+
+.hljs-built_in {
+  color: rgb(101, 165, 76) !important;
+} 
+
+pre {
+  /* background: black; */
+  /* color: rgb(96, 211, 240); */
+  border: 3px dashed rgb(96, 211, 240);
+  border-radius: 5px;
+  padding: 10px;
 }

@@ -4,7 +4,7 @@ import HocComponent from './HocComponent'
 class DefaultComponent extends Component {
     render (){
         return (
-            <p>我是一个基本的高阶组件</p>
+            <p>我是一个基本的子组件</p>
         )
     }
 }
