@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import RefCb, { RefCbCoding } from './components/ref-cb'
+import RefCbClass, { RefCbClassCoding } from './components/ref-cb-class'
 import RefCbClassVsfn, { RefCbClassVsfnCoding } from './components/ref-cb-classVSfn'
 import RefCbLifeCycle from './components/ref-cb-lifeCycle'
 import RefcreateRef, { RefcreateRefCoding } from './components/ref-createRef'
@@ -16,6 +17,7 @@ import 'highlight.js/styles/github.css'
 
 const DATA = [
   { type: 'cb', title: '回调函数 - 基础版本', component: <RefCb />, coding: RefCbCoding },
+  { type: 'cbclass', title: '回调函数 - 组件', component: <RefCbClass />, coding: RefCbClassCoding },
   { type: 'classVSfn', title: '回调函数 - 组件对比', component: <RefCbClassVsfn />, coding: RefCbClassVsfnCoding },
   // { type: 'lifeCycle', title: '回调函数 - 在生命周期中的表现', component: <RefCbLifeCycle /> },
   { type: 'createRef', title: 'createRef - 基本使用', component: <RefcreateRef />, coding: RefcreateRefCoding },
