@@ -6,7 +6,7 @@ function HocComponent(WrappendComponent) {
             const { forwardedref, handleclick, ...rest } = this.props
             return (
                 <div>
-                    <WrappendComponent ref={forwardedref} {...rest} />
+                    <WrappendComponent ref={forwardedref} {...rest} defaultValue={this.props['data-type']} />
                     <button onClick={handleclick}>click me</button>
                 </div>
             )

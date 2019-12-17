@@ -24,6 +24,7 @@ export default class RefCb extends Component {
     }
 }
 
+
 const RefCbCoding = `
 class RefCb extends Component {
     componentDidMount() {

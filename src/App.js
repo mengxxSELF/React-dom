@@ -6,12 +6,13 @@ import RefCbClassVsfn, { RefCbClassVsfnCoding } from './components/ref-cb-classV
 import RefCbLifeCycle from './components/ref-cb-lifeCycle'
 import RefcreateRef, { RefcreateRefCoding } from './components/ref-createRef'
 import RefcreateRefFuncVSclass, { RefcreateRefFuncVSclassCoding } from './components/ref-createRef-classVsFn'
+import ForwardRef, { ForwardRefCoding  } from './components/ref-forwardRef'
 import RefUseRef, { RefUseRefCoding  } from './components/ref-useRef'
 import RefUseRefClass, { UserrefclassCoding  } from './components/ref-useRef-class'
 import RefUseRefDiffCreate, { RefUseRefDiffCreateCoding } from './components/ref-useRef-diff-createRef'
 import DefaultHOC, { DefaultHOCCoding } from './components/HOC/index'
 import MYForwardRefHOC from './components/HOC-ref-origin'
-import ForwardRefHOC from './components/HOC-forwardRef'
+import ForwardRefHOC, { ForwardRefHOCCoding } from './components/HOC-forwardRef'
 import parser from './utils/parser'
 import 'highlight.js/styles/github.css'
 
@@ -22,12 +23,13 @@ const DATA = [
   // { type: 'lifeCycle', title: '回调函数 - 在生命周期中的表现', component: <RefCbLifeCycle /> },
   { type: 'createRef', title: 'createRef - 基本使用', component: <RefcreateRef />, coding: RefcreateRefCoding },
   { type: 'createRefClass', title: 'createRef - 子组件是类/函数组件', component: <RefcreateRefFuncVSclass /> , coding: RefcreateRefFuncVSclassCoding},
+  { type: 'forwardRef', title: 'forward - 基本使用', component: <ForwardRef />, coding: ForwardRefCoding },
+  // { type: 'hoc', title: 'HOC组件的概念', component: <DefaultHOC />, coding: DefaultHOCCoding },
+  // { type: 'hocref', title: '< V16 HOC中父子组件如何传递ref - 模拟 forwardRef 以props传递 ', component: <MYForwardRefHOC /> },
+  { type: 'hochooks', title: '> V16 HOC中父子组件如何传递ref - forwardRef ', component: <ForwardRefHOC />, coding: ForwardRefHOCCoding },
   { type: 'useRef', title: 'useRef - 基本使用', component: <RefUseRef /> , coding: RefUseRefCoding },
-  { type: 'useRefclass', title: 'useRef - 基本使用 - 在类组件中使用- 直接报错', component: <RefUseRefClass /> , coding: UserrefclassCoding },
-  { type: 'useCreateRefdiff', title: '对比 useRef 和 createRef 的不同', component: <RefUseRefDiffCreate />, coding: RefUseRefDiffCreateCoding },
-  { type: 'hoc', title: 'HOC组件的概念', component: <DefaultHOC />, coding: DefaultHOCCoding },
-  { type: 'hocref', title: '< V16 HOC中父子组件如何传递ref - 模拟 forwardRef 以props传递 ', component: <MYForwardRefHOC /> },
-  { type: 'hochooks', title: '> V16 HOC中父子组件如何传递ref - Hooks登场 - forwardRef ', component: <ForwardRefHOC /> },
+  // { type: 'useRefclass', title: 'useRef - 基本使用 - 在类组件中使用- 直接报错', component: <RefUseRefClass /> , coding: UserrefclassCoding },
+  { type: 'useCreateRefdiff', title: 'useRef VS createRef', component: <RefUseRefDiffCreate />, coding: RefUseRefDiffCreateCoding },
 ]
 
 function App() {

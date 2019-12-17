@@ -54,7 +54,7 @@ export default class RefCb extends Component {
         return [
             <TemFn key='tem' ref={temFn => this.temFn = temFn}  />,
             <TemClass key='TemClass' ref={temClass => this.temClass = temClass}  />,
-            <button key='btn'onClick={_ => this.show()}>click me</button>,
+            <button key='btn' onClick={_ => this.show()}>click me</button>,
         ]
     }
 }
