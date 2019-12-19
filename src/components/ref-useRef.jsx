@@ -6,7 +6,7 @@ export default () => {
 
     useEffect(() => {
         inputRef.current.focus()
-    }, [])
+    })
 
     return [
         <input key='input' value={time} ref={inputRef} />,
@@ -21,7 +21,7 @@ export default () => {
 
     useEffect(() => {
         inputRef.current.focus()
-    }, [])
+    })
 
     return [
         <input key='input' value={time} ref={inputRef} />,

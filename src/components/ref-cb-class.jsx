@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Log from './ConsoleLog'
 
-class TemClass extends Component {
+class TemChild extends Component {
     render () {
         return [
             <input key='input' ref={ref => this.cbRef = ref} defaultValue='我是类组件例子' />,
@@ -22,7 +22,7 @@ export default class RefCbClass extends Component {
 
     render() {
         return [
-            <TemClass key='TemClass' ref={temClass => this.temClass = temClass}  />,
+            <TemChild key='TemClass' ref={temClass => this.temClass = temClass}  />,
             <button key='btn'onClick={_ => this.show()}>click me</button>,
             <Log key='log' logs={this.state.logs} />
         ]
@@ -30,7 +30,7 @@ export default class RefCbClass extends Component {
 }
 
 const RefCbClassCoding = `
-class TemClass extends Component {
+class TemChild extends Component {
     render () {
         return [
             <input key='input' ref={ref => this.cbRef = ref} defaultValue='我是类组件例子' />,
@@ -50,7 +50,7 @@ export default class RefCb extends Component {
 
     render() {
         return [
-            <TemClass key='TemClass' ref={temClass => this.temClass = temClass}  />,
+            <TemChild key='TemClass' ref={temClass => this.temClass = temClass}  />,
             <button key='btn'onClick={_ => this.show()}>click me</button>,
         ]
     }
